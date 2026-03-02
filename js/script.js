@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", setupAutoGallery);
 function setupAutoGallery() {
 
   const configs = [
-    { id: "repairs-slider",  type: "image", folder: "img/Repairs",  max: MAX_REPAIR_IMAGES },
-    { id: "doorstep-slider", type: "image", folder: "img/Doorstep", max: MAX_DOORSTEP_IMAGES },
-    { id: "video-slider",    type: "video", folder: "img/Video",    max: MAX_VIDEOS }
+    { id: "repairs-slider",  type: "image", folder: "img/repairs",  max: MAX_REPAIR_IMAGES },
+    { id: "doorstep-slider", type: "image", folder: "img/doorstep", max: MAX_DOORSTEP_IMAGES },
+    { id: "video-slider",    type: "video", folder: "img/video",    max: MAX_VIDEOS }
   ];
 
   configs.forEach(initSlider);
@@ -215,5 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
