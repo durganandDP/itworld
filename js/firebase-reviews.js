@@ -142,8 +142,8 @@ function updateSchema(avg, count){
     },
     "aggregateRating":{
       "@type":"AggregateRating",
-      "ratingValue": avg.toFixed(1),
-      "reviewCount": count
+      "ratingValue": Number(avg.toFixed(1)),
+      "reviewCount": Number(count)
     }
   };
 
@@ -159,3 +159,4 @@ function updateSchema(avg, count){
 /* INIT */
 
 loadReviews();
+
