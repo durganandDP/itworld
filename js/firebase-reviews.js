@@ -128,8 +128,6 @@ function startSlide(){
 
 /* SCHEMA (SAFE) */
 function updateSchema(avg, count){
-  const old = document.getElementById("review-schema");
-  if(old) old.remove();
 
   const schema = {
     "@context":"https://schema.org",
@@ -149,16 +147,15 @@ function updateSchema(avg, count){
     }
   };
 
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.id = "review-schema";
-  script.textContent = JSON.stringify(schema);
-
-  document.head.appendChild(script);
+  const script = document.getElementById("review-schema");
+  if(script){
+    script.textContent = JSON.stringify(schema);
+  }
 
   // DEBUG (console check)
   console.log("Schema Updated:", schema);
 }
 
 /* INIT */
+
 loadReviews();
