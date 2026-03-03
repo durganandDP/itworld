@@ -131,7 +131,7 @@ function updateSchema(avg, count){
 
   const schema = {
     "@context":"https://schema.org",
-    "@type":"LocalBusiness",
+    "@type":"Organization",
     "name":"IT World The Computer ITSolution",
     "telephone":"+91-7836872230",
     "address":{
@@ -159,4 +159,5 @@ function updateSchema(avg, count){
 /* INIT */
 
 loadReviews();
+
 
