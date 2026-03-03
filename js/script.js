@@ -49,9 +49,9 @@ if (waSendBtn) {
 
 // ================= AUTO GALLERY (STABLE VERSION) =================
 
-const MAX_REPAIR_IMAGES = 15;
-const MAX_DOORSTEP_IMAGES = 15;
-const MAX_VIDEOS = 10;
+const MAX_REPAIR_IMAGES = 9;
+const MAX_DOORSTEP_IMAGES = 9;
+const MAX_VIDEOS = 5;
 
 document.addEventListener("DOMContentLoaded", setupAutoGallery);
 
@@ -215,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
 
