@@ -129,29 +129,13 @@ function startSlide(){
 /* SCHEMA (SAFE) */
 function updateSchema(avg, count){
 
-  const schema = {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"IT World The Computer ITSolution",
-    "telephone":"+91-7836872230",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Gurugram",
-      "addressRegion":"HR",
-      "addressCountry":"IN"
-    },
-    "aggregateRating":{
-      "@type":"AggregateRating",
-      "ratingValue": Number(avg.toFixed(1)),
-      "reviewCount": Number(count)
-    }
-  };
-
   const script = document.getElementById("review-schema");
-  if(script){
-    script.textContent = JSON.stringify(schema);
-  }
+  if(!script) return:
+  const schema = JSON.parse(script.textContent);
+  schema.aggregateRating.ratingValue = avg.toFixed(1);
+  schema.aggregateRating.reviewCount = count.toString();
 
+  script.textContent = JSON.stringify(schema);
   // DEBUG (console check)
   console.log("Schema Updated:", schema);
 }
@@ -159,5 +143,6 @@ function updateSchema(avg, count){
 /* INIT */
 
 loadReviews();
+
 
 
