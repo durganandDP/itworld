@@ -130,7 +130,7 @@ function startSlide(){
 function updateSchema(avg, count){
 
   const script = document.getElementById("review-schema");
-  if(!script) return:
+  if(!script) return;
   const schema = JSON.parse(script.textContent);
   schema.aggregateRating.ratingValue = avg.toFixed(1);
   schema.aggregateRating.reviewCount = count.toString();
@@ -143,6 +143,7 @@ function updateSchema(avg, count){
 /* INIT */
 
 loadReviews();
+
 
 
 
