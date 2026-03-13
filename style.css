@@ -934,23 +934,13 @@ margin-bottom: 36px;
 }
 
 
-/* ===== FOOTER ===== */
-.footer {
-  background: rgba(20, 40, 70, 0.6);
-  backdrop-filter: blur(12px);
-  padding: 20px 0;
-  text-align: center;
-  font-size: 13px;
-  color: #e0efff;
-}
-
 /* ===== service page ===== */
 
 /* efect for macOS */
 #unsupported-macos{
   padding:20px 0;
   color: #000;
-  padding-top: 5px;
+  padding-top: auto;
   padding-left:8px;
   background:
     radial-gradient(circle at top left, rgba(160,180,255,.35), transparent 40%),
@@ -1259,17 +1249,17 @@ margin-bottom: 36px;
 
 /* BRAND BOX */
 .brand-item{
-  width: 140px;            /* box width */
-  height: 80px;            /* box height */
-  background: #fff;        /* white box behind logo */
+  width: 140px;           
+  height: 80px;          
+  background: #fff;       
   border-radius: 12px;
-  padding: 10px;           /* inner spacing so logo na chipke */
+  padding: 10px;          
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.16);
   transition: transform .22s, box-shadow .22s;
-  overflow: hidden;        /* agar image bohot bada ho to overflow hide */
+  overflow: hidden;      
 }
 
 /* IMAGE */
@@ -1278,7 +1268,7 @@ margin-bottom: 36px;
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain;     /* keep aspect ratio, no stretching */
+  object-fit: contain;    
   display: block;
 }
 
@@ -1297,3 +1287,62 @@ margin-bottom: 36px;
 .brand-item { width: 110px; height: 64px; padding: 8px; }
 .brand-grid { gap: 12px; }
 }
+
+/* ===== FOOTER ===== */
+.footer{
+min-height: auto;
+  padding-top: 20px;
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(60,120,255,0.35), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(120,200,255,0.35), transparent 45%),
+    linear-gradient(135deg, #0f2a44, #0b3d66);
+}
+
+.footer-main{
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+gap:30px;
+text-align:left;
+}
+
+.footer-col h3,
+.footer-col h4{
+margin-bottom:15px;
+font-size:18px;
+}
+
+.footer-col ul{
+list-style:none;
+padding:0;
+}
+
+.footer-col ul li{
+margin-bottom:8px;
+}
+
+.footer-col ul li a{
+color:#ffffff;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col ul li a:hover{
+color:#4db3ff;
+}
+
+.footer-bottom{
+margin-top:20px;
+border-top:1px solid rgba(255,255,255,0.2);
+padding-top:15px;
+text-align:center;
+font-size:13px;
+}
+
+
+
