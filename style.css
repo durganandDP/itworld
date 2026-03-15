@@ -1302,6 +1302,7 @@ min-height: auto;
 .footer-main{
   font-size: 14px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .footer-grid{
@@ -1343,6 +1344,3 @@ padding-top:15px;
 text-align:center;
 font-size:13px;
 }
-
-
-

@@ -5,7 +5,8 @@ if (typing) {
     "Laptop, Computer & MacBook Repair at Home",
     "Windows & MS Office Genuine License",
     "Data Recovery, SSD/RAM Upgrade & Deep Cleaning",
-    "Doorstep IT Service in Gurugram (HR)"
+    "Doorstep IT Service in Gurugram (HR)",
+    "OS installation"
   ];
   let i = 0, j = 0, del = false;
   (function type() {
