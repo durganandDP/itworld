@@ -155,7 +155,13 @@ function initSlider(cfg) {
     if (cfg.type === "image") {
 
       const img = new Image();
-
+      if(cfg.folder.includes("repairs")){
+        img.alt = "Laptop repair technician working image" + i;
+      }
+      else if(cfg.folder.includes("doorstep")){
+        img.alt = "Doorstep computer repair service image" + i;
+      }
+      
       img.onload = () => {
         addSlide(img);
         loaded++;
