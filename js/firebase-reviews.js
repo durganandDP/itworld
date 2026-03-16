@@ -101,8 +101,6 @@ async function loadReviews(){
   avgEl.textContent = avg.toFixed(1);
   countEl.textContent = total;
 
-  updateSchema(avg, total);
-
   startSlide();
 }
 
@@ -126,19 +124,6 @@ function startSlide(){
   }, 4000);
 }
 
-/* SCHEMA (SAFE) */
-function updateSchema(avg, count){
-
-  const script = document.getElementById("review-schema");
-  if(!script) return;
-  const schema = JSON.parse(script.textContent);
-  schema.aggregateRating.ratingValue = avg.toFixed(1);
-  schema.aggregateRating.reviewCount = count.toString();
-
-  script.textContent = JSON.stringify(schema);
-  // DEBUG (console check)
-  console.log("Schema Updated:", schema);
-}
 
 /* INIT */
 
