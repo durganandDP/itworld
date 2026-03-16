@@ -937,7 +937,8 @@ margin-bottom: 36px;
 /* ===== service page ===== */
 
 /* efect for macOS */
-#unsupported-macos{
+#unsupported-macos,
+#service-all{
   padding:20px 0;
   color: #000;
   padding-top: auto;
@@ -993,7 +994,7 @@ margin-bottom: 36px;
 
 /* Premium badge */
 .glass-glow::after {
-  content: "Premium macOS Service";
+  content: "Premium Service";
   position: absolute;
   top: -18px;
   right: 22px;
@@ -1055,7 +1056,8 @@ margin-bottom: 36px;
 
 /* TEXT WRAPPER */
 /* CONTENT AREA */
-.unsupported-content{
+.unsupported-content,
+.service-content{
   margin-top:20px;
   font-size:15px;
   line-height:1.8;
@@ -1063,7 +1065,8 @@ margin-bottom: 36px;
 }
 
 /* HEADINGS */
-.unsupported-content h2{
+.unsupported-content h2,
+.service-content h2{
   font-size:18px;
   margin-top:8px;
   margin-bottom:10px;
@@ -1071,19 +1074,26 @@ margin-bottom: 36px;
 }
 
 /* PARAGRAPH SPACING */
-.unsupported-content p{
+.unsupported-content p,
+.service-content p{
   margin-bottom:14px;
 }
 
 /* LIST STYLE */
-.unsupported-content ul{
+.unsupported-content ul,
+.service-content ul{
   padding-left:20px;
   margin-bottom:5px;
 }
 
-.unsupported-content li{
+.unsupported-content li,
+.service-content li{
   margin-bottom:2px;
   font-size:14px;
+}
+
+.section-title{
+  text-align: center;
 }
 
 /* PRICE LIST */
