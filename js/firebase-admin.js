@@ -27,9 +27,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+let unsubscribe = null;
+
 /* LOGIN */
 loginBtn.onclick = () => {
-  signInWithEmailAndPassword(auth, email.value, password.value)
+  signInWithEmailAndPassword(auth, email.value.trim(), password.value)
     .catch(err => alert(err.message));
 };
 
@@ -43,7 +45,6 @@ onAuthStateChanged(auth, user => {
 
   if (user && user.email === "admin@itworld.in") {
 
-    // Hide login, show dashboard
     loginSection.style.display = "none";
     adminPanel.style.display = "block";
 
@@ -51,12 +52,14 @@ onAuthStateChanged(auth, user => {
 
   } else {
 
-    // Not logged in OR not admin
     loginSection.style.display = "block";
     adminPanel.style.display = "none";
 
+    if (unsubscribe) unsubscribe();
+
     if (user) signOut(auth);
   }
+
 });
 
 /* REALTIME PENDING REVIEWS */
@@ -67,33 +70,61 @@ function loadPendingReviewsRealtime() {
     where("approved", "==", false)
   );
 
-  onSnapshot(q, snap => {
+  unsubscribe = onSnapshot(q, snap => {
 
     pendingReviews.innerHTML = "";
 
     if (snap.empty) {
-      pendingReviews.innerHTML = "<p>No pending reviews</p>";
+      pendingReviews.textContent = "No pending reviews";
       return;
     }
 
     snap.forEach(d => {
+
       const r = d.data();
 
-      pendingReviews.innerHTML += `
-        <div class="review-card">
-          <strong>${r.name}</strong> – ${"★".repeat(r.rating)}
-          <p>${r.message}</p>
-          <small>${new Date(r.created).toLocaleString()}</small>
+      const card = document.createElement("div");
+      card.className = "review-card";
 
-          <div class="actions">
-            <button onclick="approveReview('${d.id}')">Approve</button>
-            <button class="danger" onclick="deleteReview('${d.id}')">Delete</button>
-          </div>
-        </div>
-      `;
+      const name = document.createElement("strong");
+      name.textContent = r.name;
+
+      const stars = document.createElement("span");
+      stars.textContent = " – " + "★".repeat(r.rating);
+
+      const msg = document.createElement("p");
+      msg.textContent = r.message;
+
+      const date = document.createElement("small");
+      date.textContent = new Date(r.created).toLocaleString();
+
+      const actions = document.createElement("div");
+      actions.className = "actions";
+
+      const approveBtn = document.createElement("button");
+      approveBtn.textContent = "Approve";
+      approveBtn.onclick = () => approveReview(d.id);
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.className = "danger";
+      deleteBtn.onclick = () => deleteReview(d.id);
+
+      actions.appendChild(approveBtn);
+      actions.appendChild(deleteBtn);
+
+      card.appendChild(name);
+      card.appendChild(stars);
+      card.appendChild(msg);
+      card.appendChild(date);
+      card.appendChild(actions);
+
+      pendingReviews.appendChild(card);
+
     });
 
   });
+
 }
 
 /* APPROVE */

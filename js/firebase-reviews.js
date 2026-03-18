@@ -1,10 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import {
   getFirestore,
   collection,
   addDoc,
   getDocs
-} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 /* FIREBASE */
 const firebaseConfig = {
@@ -26,7 +26,7 @@ let rating = 0;
 const stars = document.querySelectorAll(".star-input span");
 
 stars.forEach(star=>{
-  star.onclick=()=>{
+  star.onclick = ()=>{
     rating = Number(star.dataset.val);
     revRating.value = rating;
 
@@ -38,6 +38,7 @@ stars.forEach(star=>{
 
 /* SUBMIT REVIEW */
 submitReview.onclick = async ()=>{
+
   const name = revName.value.trim();
   const msg  = revMessage.value.trim();
 
@@ -48,10 +49,10 @@ submitReview.onclick = async ()=>{
 
   await addDoc(collection(db,"reviews"),{
     name,
-    message:msg,
+    message: msg,
     rating,
     approved:false,
-    created:Date.now()
+    created: Date.now()
   });
 
   alert("Thanks for your valuable feedback!");
@@ -69,26 +70,43 @@ let timer = null;
 
 /* LOAD REVIEWS */
 async function loadReviews(){
+
   const snap = await getDocs(collection(db,"reviews"));
 
   let sum = 0;
   total = 0;
+
   track.innerHTML = "";
 
   snap.forEach(d=>{
+
     const r = d.data();
     if(!r.approved) return;
 
     total++;
     sum += r.rating;
 
-    track.innerHTML += `
-      <div class="review-card">
-        <div class="name">${r.name}</div>
-        <div class="stars">${"★".repeat(r.rating)}</div>
-        <p>${r.message}</p>
-      </div>
-    `;
+    /* SAFE CARD */
+    const card = document.createElement("div");
+    card.className = "review-card";
+
+    const name = document.createElement("div");
+    name.className = "name";
+    name.textContent = r.name;
+
+    const stars = document.createElement("div");
+    stars.className = "stars";
+    stars.textContent = "★".repeat(r.rating);
+
+    const msg = document.createElement("p");
+    msg.textContent = r.message;
+
+    card.appendChild(name);
+    card.appendChild(stars);
+    card.appendChild(msg);
+
+    track.appendChild(card);
+
   });
 
   if(total === 0){
@@ -104,8 +122,9 @@ async function loadReviews(){
   startSlide();
 }
 
-/* AUTO SLIDE (FIXED) */
+/* AUTO SLIDE */
 function startSlide(){
+
   if(timer) clearInterval(timer);
 
   if(total <= 1) return;
@@ -114,6 +133,7 @@ function startSlide(){
   track.style.transform = "translateX(0%)";
 
   timer = setInterval(()=>{
+
     index++;
 
     if(index >= total){
@@ -121,14 +141,9 @@ function startSlide(){
     }
 
     track.style.transform = `translateX(-${index * 100}%)`;
-  }, 4000);
+
+  },4000);
 }
 
-
 /* INIT */
-
 loadReviews();
-
-
-
-
