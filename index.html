@@ -300,7 +300,7 @@ id= "review-schema">
     </div>
 
     <ul class="menu">
-      <li class="active"><a href="./">Home</a></li>
+      <li class="active"><a href="/">Home</a></li>
       <li><a href="/service/">Services</a></li>
       <li>
         <a href="tel:+917836872230" class="call-btn"
@@ -483,7 +483,10 @@ id= "review-schema">
           <label for="wa-issue">Issue / Problem Details</label>
           <textarea id="wa-issue" rows="3" placeholder="Example: I have macbook air 2013 model does not support any latest application. / HP i5 laptop very slow, taking 10 minutes to start. / My PC not turning on."></textarea>
         </div>
-        <button id="wa-send" class="wa-button wa-full">Send Enquiry on WhatsApp</button>
+        <button id="wa-send" class="wa-button wa-full"
+          onclick="gtag('event','whatsapp_form_click',{'event_category':'engagement'});">
+          Send Enquiry on WhatsApp
+        </button>
       </div>
     </div>
   </section>
