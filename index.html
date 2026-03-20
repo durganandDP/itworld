@@ -627,7 +627,10 @@ id= "review-schema">
 
       <textarea id="revMessage" rows="3" placeholder="Your experience..." required></textarea>
 
-      <button id="submitReview" class="btn primary">Submit Review</button>
+      <button id="submitReview" class="btn primary"
+        onclick="gtag('event',review_submit',{'event_category':'engagement'});">
+        Submit Review
+      </button>
       <p class="review-note">* Thank you for your feedback!</p>
     </div>
 
