@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://itworldthecomputeritsolution.in/sitemap.xml
-Sitemap: https://itworldthecomputeritsolution.in/llms.txt
