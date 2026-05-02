@@ -534,6 +534,18 @@
   padding: 25px 15px;
 }
 
+.disclosure h4 {
+  font-size: 16px;
+  color: #25D366;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.disclosure i {
+  color: #ff6d0b;
+}
+  
+
 .disclosure p {
   font-size: 15px;
   color: #ffffff;
