@@ -1,109 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog Coming Soon | IT WORLD THE COMPUTER ITSOLUTION</title>
+<meta charset="UTF-8">
 
-  <!-- SEO SAFE -->
-  <meta name="robots" content="noindex, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBook, Laptop Repair Guides & Tech News Gurgaon | How can save you money</title>
 
-  <meta name="description" content="Tech blog is coming soon. Get tips on MacBook repair, laptop troubleshooting, and maintenance guides in Gurgaon.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
+<meta name="description" content="Expert MacBook repair guides, laptop troubleshooting tips, tech news and hardware updates in Gurgaon by ITSolution.">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="IT WORLD THE COMPUTER ITSOLUTION">
+
+<link rel="canonical" href="https://itworldthecomputeritsolution.in/blog/">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/blog/blog.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="MacBook, Laptop Repair Guides & Tech News Gurgaon">
+<meta property="og:description" content="MacBook repair guides, laptop troubleshooting, hardware updates and tech news.">
+<meta property="og:image" content="https://itworldthecomputeritsolution.in/blog/img/blog-og-image.webp">
+<meta property="og:url" content="https://itworldthecomputeritsolution.in/blog/">
+<meta property="og:type" content="website">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MacBook, Laptop Repair Guides & Tech News Gurgaon">
+<meta name="twitter:description" content="MacBook repair, laptop troubleshooting, hardware updates and tech news.">
+<meta name="twitter:image" content="https://itworldthecomputeritsolution.in/blog/img/blog-og-image.webp">
+<meta name="twitter:site" content="@itworldggn">
+
+<!-- BLOG SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "ITSolution Blog",
+  "url": "https://itworldthecomputeritsolution.in/blog/",
+  "description": "MacBook repair guides, laptop troubleshooting, tech news and hardware updates.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "IT WORLD THE COMPUTER ITSOLUTION",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://itworldthecomputeritsolution.in/logo.png"
     }
+  }
+}
+</script>
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
+<!-- BREADCRUMB SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://itworldthecomputeritsolution.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://itworldthecomputeritsolution.in/blog/"
     }
+  ]
+}
+</script>
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #cbd5f5;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    ul {
-      text-align: left;
-      margin-top: 20px;
-      color: #cbd5f5;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .home {
-      background: #22c55e;
-      color: #000;
-    }
-
-    .call {
-      background: #3b82f6;
-      color: #fff;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: #000;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    
-    <h1>Blog Coming Soon 🚀</h1>
 
-    <p>
-      We are working on useful articles to help you with MacBook repair, laptop issues, and troubleshooting guides in Gurgaon.
-    </p>
+<!-- HEADER -->
+<header class="header">
+  <h1>MacBook & Laptop Repair Guides, Tech News & Hardware Updates</h1>
+  <p>Expert tech guides, troubleshooting tips & latest hardware updates</p>
+</header>
 
-    <h2>What You’ll Find Here</h2>
+<!-- CATEGORY FILTER -->
+<div class="filters">
+  <button onclick="filterPosts('support')">Tech Support Guides</button>
+  <button onclick="filterPosts('news')">Tech News</button>
+  <button onclick="filterPosts('hardware')">Hardware Updates</button>
+  <button onclick="filterPosts('all')">All Posts</button>
+</div>
 
-    <ul>
-      <li>MacBook repair guides</li>
-      <li>Laptop troubleshooting tips</li>
-      <li>Repair cost breakdowns</li>
-      <li>Performance & speed optimization tips</li>
-    </ul>
+<!-- BLOG -->
+<section class="blog-container" id="blogContainer">
+  <div id="all-grid" class="category-grid" style="display:none;"></div>
 
-    <p>Need urgent help? Contact IT WORLD THE COMPUTER ITSOLUTION now.</p>
+  <!-- ================= SUPPORT ================= -->
+  <div class="category" id="support">
+    <h2 class="category-title">Tech Support Guides</h2>
+     <p class="category-desc">
+       Step-by-step MacBook and laptop repair guides, troubleshooting tips, and solutions.
+     </p>
 
-    <!-- Buttons -->
-    <a href="/" class="btn home">Go to Homepage</a>
-    <a href="tel:+917836872230" class="btn call">📞 Call Now</a>
-    <a href="https://wa.me/917836872230" class="btn whatsapp">💬 WhatsApp</a>
+    <div class="category-grid">
+
+      <div class="blog-card" data-category="support">
+        <img src="/blog/img/macbook-repair.webp" alt="MacBook repair service Gurgaon">
+        <h2>
+          <a href="/blog/it-help/macbook-screen-repair-cost/">
+            MacBook Screen Repair Cost in Gurgaon (2026 Guide)
+          </a>
+        </h2>
+        <p>Complete guide to MacBook screen repair cost and service options.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="support">
+        <img src="/blog/img/laptop-overheat.webp" loading="lazy" alt="Laptop overheating fix guide">
+        <h2>
+          <a href="/blog/it-help/laptop-overheating-fix/">
+            Laptop Overheating Problem – Causes & Fix
+          </a>
+        </h2>
+        <p>Simple steps to fix laptop overheating issues and improve performance.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="support">
+        <img src="/blog/img/bootable-usb.webp" loading="lazy" alt="Bootable USB guide for laptop repair">
+        <h2>
+          <a href="/blog/it-help/make-bootable-usb/">
+            How to Make a Bootable USB for Laptop Repair
+          </a>
+        </h2>
+        <p>Step-by-step guide to creating a bootable USB drive.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= NEWS ================= -->
+  <div class="category" id="news">
+    <h2 class="category-title">Tech News</h2>
+      <p class="category-desc">
+        Stay updated with the latest tech news, product launches, and industry trends.
+      </p>
+        
+    <div class="category-grid">
+
+      <div class="blog-card" data-category="news">
+        <img src="/blog/img/apple-chip.webp" loading="lazy" alt="Apple M5 chip launch news">
+        <h2>
+          <a href="/blog/it-news/apple-m5-chip/">
+            Apple M5 Chip Launch – What’s New?
+          </a>
+        </h2>
+        <p>Latest Apple processor update and performance improvements explained.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="news">
+        <img src="/blog/img/windows-12.webp" loading="lazy" alt="Windows 12 release news">
+        <h2>
+          <a href="/blog/it-news/windows-12-release/">
+            Windows 12 Release Date & New Features
+          </a>
+        </h2>
+        <p>Upcoming Windows 12 release details and features overview.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="news">
+        <img src="/blog/img/gaming-laptops.webp" loading="lazy" alt="Top tech trends 2026">
+        <h2>
+          <a href="/blog/it-news/best-gaming-laptops-2026/">
+            Best Gaming Laptops in 2026
+          </a>
+        </h2>
+        <p>Top gaming laptops, GPU performance, cooling systems, and gaming features explained.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= HARDWARE ================= -->
+  <div class="category" id="hardware">
+    <h2 class="category-title">Hardware Updates</h2>
+      <p class="category-desc">
+        Latest hardware updates, performance comparisons, and upgrade guides.
+      </p>
+
+    <div class="category-grid">
+
+      <div class="blog-card" data-category="hardware">
+        <img src="/blog/img/ssd-upgrade.webp" loading="lazy" alt="SSD vs HDD speed comparison">
+        <h2>
+          <a href="/blog/it-hardware/ssd-vs-hdd/">
+            SSD vs HDD – Which is Better for Your Laptop?
+          </a>
+        </h2>
+        <p>Compare performance and benefits of SSD vs HDD.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="hardware">
+        <img src="/blog/img/ram-upgrade.webp" loading="lazy" alt="Best RAM for gaming laptops 2026">
+        <h2>
+          <a href="/blog/it-hardware/best-ram-2026/">
+            Best RAM for Gaming Laptops/Desktop in 2026
+          </a>
+        </h2>
+        <p>Best RAM options for performance and gaming.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+      <div class="blog-card" data-category="hardware">
+        <img src="/blog/img/home-laptop.webp" loading="lazy" alt="Best laptop for home users 2026">
+        <h2>
+          <a href="/blog/it-hardware/best-home-laptop-2026/">
+            Best Laptop for Home Users in 2026
+          </a>
+        </h2>
+        <p>Top laptops designed for home use and daily work.</p>
+        <span class="date">Updated March 2026</span>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- LOAD MORE -->
+<div class="load-more">
+  <button onclick="loadMore()">Load More Articles</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT -->
+    <div class="footer-col">
+      <h3>IT WORLD THE COMPUTER ITSOLUTION Blog</h3>
+      <p>
+        Explore expert guides, tech news and hardware updates. 
+        Learn, fix and stay updated with latest technology.
+      </p>
+    </div>
+
+    <!-- BLOG LINKS -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="/blog/#all" onclick="filterPosts('all')">All Articles</a></li>
+        <li><a href="/blog/#support" onclick="filterPosts('support')">Tech Support Guides</a></li>
+        <li><a href="/blog/#news" onclick="filterPosts('news')">Tech News</a></li>
+        <li><a href="/blog/#hardware" onclick="filterPosts('hardware')">Hardware Updates</a></li>
+      </ul>
+    </div>
+
+    <!-- PUBLISH -->
+    <div class="footer-col">
+     <div class="guest-info">
+      <h3>Write for Us</h3>
+       <p>
+        We accept high-quality guest posts related to tech, laptop repair, and hardware updates.
+      </p>
+       <a href="/blog/guest-post-guidelines/" class="guest-btn">
+       View Guidelines
+      </a>
+     </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p><a href="mailto:itworldthecomputeritsolution@gmail.com">Email Us</a></p>
+
+      <div class="social">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/durganand.techhelpers" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/the_mercy_boy24" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/itworldggn" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/durganand-pandit/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
 
   </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> IT WORLD THE COMPUTER ITSOLUTION Blog. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
+<script src="/blog/blog.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,356 @@
+/* ===============================
+   RESET
+=============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  line-height: 1.5;
+}
+
+
+/* ===============================
+   HEADER
+=============================== */
+.header {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.header p {
+  margin-top: 5px;
+  color: #cbd5f5;
+}
+
+
+/* ===============================
+   FILTERS
+=============================== */
+.filters {
+  text-align: center;
+  margin: 20px;
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+  z-index: 100;
+  padding: 10px 0;
+}
+
+.filters button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background: #e2e8f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+.filters button.active {
+  background: #22c55e;
+  color: #fff;
+}
+
+
+/* ===============================
+   MAIN CONTAINER
+=============================== */
+.blog-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+/* ===============================
+   CATEGORY
+=============================== */
+.category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  margin: 30px 0 10px;
+  font-size: 20px;
+  color: #0e141d;
+  border-left: 4px solid #22c55e;
+  padding-left: 10px;
+}
+
+.category-desc {
+  font-size: 14px;
+  color: #1d232c;
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   GRID (IMPORTANT)
+=============================== */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ===============================
+   BLOG CARD
+=============================== */
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.blog-card h2 {
+  padding: 12px 12px 5px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.blog-card p {
+  padding: 0 12px;
+  color: #252c36;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.blog-card .date {
+  display: block;
+  padding: 10px 12px 15px;
+  font-size: 12px;
+  color: #3b4149;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: #171f2c;
+}
+
+.blog-card a:hover {
+  color: #22c55e;
+}
+
+
+/* ===============================
+   LOAD MORE
+=============================== */
+.load-more {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.load-more button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.load-more button:hover {
+  background: #16a34a;
+}
+
+
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #f5f7ff;
+}
+
+.footer-col a:hover {
+  color: #22c55e;
+
+}
+
+.footer-col .guest-btn:hover {
+  background: #16a34a;
+  color: #181313;
+}
+
+
+/* ===============================
+   GUEST BUTTON
+=============================== */
+.guest-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #22c55e;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.guest-btn:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
+
+/* ===============================
+   SOCIAL
+=============================== */
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  background: #1e293b;
+  color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: #22c55e;
+  color: black;
+}
+
+
+/* ===============================
+   FOOTER BOTTOM
+=============================== */
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* ===============================
+   APPLE M5 
+=============================== */
+/* APPLE M5 NEWS PAGE */
+
+.news-highlight {
+  background: #eff6ff;
+  border-left: 5px solid #2563eb;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.news-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+.news-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.news-table th,
+.news-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+
+.news-table th {
+  background: #f8fafc;
+}
+
+.news-page .category-title {
+  color: #111827;
+}
