@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/laptop-repair/gurgaon/style.css">
 
   <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
   <div class="container nav">
 
     <div class="brand">
-      <img src="/android-chrome-512x512.png" loading="lazy" alt="Laptop & MacBook Repair in Gurgaon">
+      <img src="/landingicon.avif" loading="lazy" alt="Laptop & MacBook Repair in Gurgaon">
 
       <div class="brand-text">
         <span class="brand-main"><strong>IT WORLD</strong></span>
@@ -40,13 +40,14 @@
 
   <!-- LEFT TEXT -->
   <div class="hero-text">
-    <h1>Expert Laptop & MacBook Repair at Your Location</h1>
+    <h1>Laptop Repair in Gurgaon – Home Service Within 2 Hours</h1>
 
     <p class="highlight">
-      No Fix, No Fee (<a href="/terms/" target="_blank">T&C Apply</a>). Get your device repaired today, within 2 hours home visit guarantee.
+      No Fix, No Fee (<a href="/terms/" target="_blank">T&C Apply</a>). book your appointment today technician will visit your location usually within 2 hours.
     </p>
 
     <ul>
+      <li><i class="fa fa-check-circle"></i> Free Consultation</li>
       <li><i class="fa fa-check-circle"></i> Home Visit Repair (Across Gurgaon)</li>
       <li><i class="fa fa-check-circle"></i> 6–12 Month Warranty on Parts</li>
       <li><i class="fa fa-check-circle"></i> Transparent Pricing</li>
@@ -56,8 +57,9 @@
 
   <!-- RIGHT FORM -->
   <form class="quote-form" id="quoteForm">
-    <h2>Get Instant Quote</h2>
-    <p class="sub-text">Technician will visit your location within 2 hours</p>
+    <h2>Schedule a Home Visit</h2>
+
+    <p class="sub-text">Talk to an expert first. Book your repair only after you're satisfied.</p>
     <input type="text" id="name" placeholder="Full Name" required>
     <input type="text" id="address" placeholder="Your Address / Area" required>
     <select id="problem" required>
@@ -71,9 +73,9 @@
      <option>Other</option>
     </select>
     <textarea id="message" placeholder="Describe your problem (optional)"></textarea>
-    <button type="submit">Get Free Quote</button>
+    <button type="submit">Get Free Consultation</button>
      <p class="privacy">
-      By submitting, you agree to our 
+      🔒 Your information is kept private. 
      <a href="/privacy-policy/" target="_blank">Privacy Policy</a>
     </p>
     </form>
@@ -208,6 +210,12 @@
         <i class="fa fa-clock"></i><i class="fa fa-motorcycle" style="margin: 0 10px;"></i></i><i class="fa fa-house-chimney-user"></i>
         <h3>2 Hour Home Visit</h3>
         <p>Our technician reaches your location quickly and fixes your device at your home.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa fa-medal"></i>
+        <h3>10+ years Experience</h3>
+        <p>Over 10 years of experience providing reliable laptop, MacBook and desktop repair services.</p>
       </div>
 
       <div class="why-card">
@@ -354,12 +362,12 @@ document.getElementById("quoteForm").addEventListener("submit", function(e) {
   var problem = document.getElementById("problem").value;
   var message = document.getElementById("message").value;
 
-  var text = "Hi, I need a laptop repair quote.%0A%0A"
+  var text = "Hello! I would like to schedule a laptop repair service.%0A%0A"
            + "👤 Name: " + name + "%0A"
            + "📍 Address: " + address + "%0A"
            + "💻 Issue: " + problem + "%0A"
            + "📝 Details: " + message + "%0A%0A"
-           + "Please share Quote & availability.";
+           + "Kindly confirm technician availability, expected visit time and estimated repair cost. Thank you!";
 
   var url = "https://wa.me/917836872230?text=" + text;
 
