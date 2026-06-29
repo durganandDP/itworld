@@ -80,229 +80,709 @@
   }
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: webkit-fill-available; /* Safari fix */
-  background: url('/herobg.avif') center/cover no-repeat;
+
+/* =====================================================
+                    HERO (PART 1)
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    min-height:100vh;
+    min-height:100svh;
+
+    background:#000;
+
 }
 
-/* OVERLAY */
-.hero-overlay {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.65);
-  inset: 0;
+
+/* Background Image */
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+    z-index:0;
+    pointer-events:none;
+    user-select:none;
 }
 
-/* MAIN CONTENT */
-.hero-content {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 15px;
-  color: #fff;
+
+/* Overlay */
+
+.hero-overlay{
+    position:relative;
+    width:100%;
+    min-height:inherit;
+    background:rgba(0,0,0,.65);
 }
+
+
+/* Container */
+
+.hero-content{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    min-height:inherit;
+    color:#fff;
+    padding:40px 15px;
+
+}
+
+
+/* =========================
+        Desktop
+========================= */
+
+@media(min-width:992px){
+
+ .hero-content{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:40px;
+ }
+
+}
+
+
+/* =========================
+        Mobile
+========================= */
+
+@media(max-width:991px){
+
+ .hero{
+ min-height:auto;
+ }
+
+ .hero-overlay{
+  min-height:auto;
+ }
+
+ .hero-content{
+ display:block;
+ padding:40px 15px;
+ }
+
+}
+
+/* =========================
+        Safari Fix
+========================= */
+
+@supports(-webkit-touch-callout:none){
+
+ .hero{
+ min-height:100svh;
+ }
+
+}
+
+/* =====================================================
+                HERO TEXT (PART 2)
+===================================================== */
 
 /* TEXT BLOCK */
-.hero-text {
-  text-align: center;
+
+.hero-text{
+    text-align:center;
 }
 
 /* TITLE */
-.hero-text h1 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
+
+.hero-text h1{
+    font-size:2.4rem;
+    line-height:1.2;
+    margin-bottom:15px;
+    font-weight:700;
+
 }
 
-/* TEXT */
-.hero-text p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #ddd;
+/* PARAGRAPH */
+
+.hero-text p{
+
+    font-size:1rem;
+    line-height:1.6;
+    margin-bottom:15px;
+    color:#ddd;
+
 }
 
-.hero a {
-  color: #25D366;
-  text-decoration: underline;
+/* LINK */
+
+.hero a{
+
+    color:#25D366;
+    text-decoration:underline;
+
 }
 
 /* HIGHLIGHT */
-.highlight {
-  font-weight: 600;
+
+.highlight{
+
+  font-weight:600;
+
 }
 
 /* LIST */
-.hero-text ul {
-  list-style: none;
-  padding: 0;
-  margin: 15px 0;
-  text-align: left;
+
+.hero-text ul{
+  list-style:none;
+  padding:0;
+  margin:15px 0;
+  text-align:left;
+
 }
 
-.hero-text li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 10px 0;
-  font-size: 0.95rem;
+/* LIST ITEM */
+
+.hero-text li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:10px 0;
+  font-size:.95rem;
+
 }
 
-.hero-text i {
-  color: #ff8c00;
+/* ORANGE TICK */
+
+.hero-text li i{
+  color:#ff8c00;
+  font-size:16px;
+  width:18px;
+  text-align:center;
+  flex-shrink:0;
 }
+
+
+/* ======================
+        DESKTOP
+====================== */
+
+@media(min-width:992px){
+ .hero-text{
+ flex:1;
+ text-align:left;
+ padding-right:20px;
+ }
+
+.hero-text ul{
+ max-width:470px;
+ }
+}
+
+
+/* ======================
+        MOBILE
+====================== */
+
+@media(max-width:600px){
+
+ .hero-text{
+ text-align:center;
+ }
+
+ .hero-text h1{
+ font-size:1.8rem;
+ margin-bottom:12px;
+ }
+
+ .hero-text p{
+ font-size:.9rem;
+ margin-bottom:12px;
+ }
+
+ .highlight{
+ font-size:.9rem;
+ }
+
+ .hero-text ul{
+ margin:15px auto;
+ max-width:330px;
+ }
+
+ .hero-text li{
+ font-size:.85rem;
+ margin:8px 0;
+ }
+}
+
+/* =====================================================
+                HERO FORM (PART 3)
+===================================================== */
 
 /* FORM */
-.quote-form {
-  margin: 20px auto 0;
-  max-width: 380px;
 
-  background: rgba(255,255,255,0.08);
-  padding: 20px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
+.quote-form{
+    margin:20px auto 0;
+    max-width:380px;
+    width:100%;
+    background:rgba(255,255,255,.08);
+    padding:20px;
+    border-radius:14px;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+
+/* DESKTOP */
+
+@media(min-width:992px){
+ .quote-form{
+ flex:0 0 360px;
+ margin:0;
+ }
+}
+
 
 /* HEADING */
-.quote-form h2 {
-  font-size: 22px;
-  margin-bottom: 5px;
-  text-align: center;
+
+.quote-form h2{
+font-size:22px;
+margin-bottom:5px;
+text-align:center;
+color:#fff;
 }
 
-.sub-text {
-  font-size: 13px;
-  color: #e6f7f7;
-  text-align: center;
-  margin-bottom: 15px;
+
+/* SUB */
+
+.sub-text{
+font-size:13px;
+color:#e6f7f7;
+text-align:center;
+margin-bottom:15px;
+line-height:1.5;
 }
 
-/* INPUTS */
+
+/* INPUT */
+
 .quote-form input,
 .quote-form select,
-.quote-form textarea {
-  width: 100%;
-  padding: 11px 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-
-  background: rgba(255,255,255,0.9);
+.quote-form textarea{
+width:100%;
+padding:11px 12px;
+margin-bottom:10px;
+border-radius:8px;
+border:none;
+outline:none;
+font-size:14px;
+background:rgba(255,255,255,.90);
 }
 
-/* FOCUS EFFECT */
+
+/* FOCUS */
 .quote-form input:focus,
 .quote-form select:focus,
-.quote-form textarea:focus {
-  box-shadow: 0 0 0 2px rgba(37,211,102,0.3);
+.quote-form textarea:focus{
+box-shadow:0 0 0 2px rgba(37,211,102,.30);
 }
+
 
 /* TEXTAREA */
-.quote-form textarea {
-  height: 75px;
-  resize: none;
+.quote-form textarea{
+height:75px;
+resize:none;
 }
+
 
 /* BUTTON */
-.quote-form button {
-  width: 100%;
-  background: linear-gradient(135deg, #25D366, #1ebd5a);
-  color: #fff;
-  padding: 12px;
-  border-radius: 30px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.25s;
 
-  box-shadow: 0 6px 15px rgba(37,211,102,0.3);
+.quote-form button{
+width:100%;
+background:linear-gradient(
+135deg,
+#25D366,
+#1ebd5a
+);
+color:#fff;
+padding:12px;
+border-radius:30px;
+border:none;
+font-weight:bold;
+font-size:15px;
+cursor:pointer;
+transition:.25s;
+box-shadow:0 6px 15px rgba(37,211,102,.30);
 }
 
-.quote-form button:hover {
-  transform: translateY(-2px);
+.quote-form button:hover{
+transform:translateY(-2px);
 }
 
-/* PRIVACY TEXT */
-.privacy {
-  font-size: 12px;
-  color: #8a8a8a;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 10px;
+
+/* PRIVACY */
+
+.privacy{
+font-size:12px;
+color:#bdbcbc;
+font-weight:600;
+text-align:center;
+margin-top:10px;
+line-height:1.5;
 }
 
-.privacy a {
-  color: #25D366;
-  text-decoration: none;
+
+.privacy a{
+color:#25D366;
+text-decoration:none;
 }
 
-.privacy a:hover {
-  text-decoration: underline;
+.privacy a:hover{
+text-decoration:underline;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .quote-form {
-    max-width: 100%;
-    padding: 16px;
-  }
+/* =====================================================
+            HERO RESPONSIVE FIX (PART 4)
+===================================================== */
 
-  .hero-content {
-    display: block;
-  }
 
+/* ===========================
+        DESKTOP
+=========================== */
+
+@media (min-width:992px){
+ .hero{
+ min-height:100vh;
+ min-height:100svh;
+ }
+
+ .hero-overlay{
+ display:flex;
+ align-items:center;
+ }
+
+ .hero-content{
+ min-height:inherit;
+ }
 }
 
-/* ================= DESKTOP ================= */
-@media (min-width: 992px) {
 
-  .hero {
-    min-height: 60vh;
-  }
+/* ===========================
+        TABLET
+=========================== */
 
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
+@media (max-width:991px){
+ .hero{
+ min-height:auto;
+ }
 
-  .hero-text {
-    flex: 1;
-    text-align: left;
-  }
+ .hero-overlay{
+ position:relative;
+ display:block;
+ }
 
-  .quote-form {
-    flex: 0 0 360px;
-    margin: 0;
-  }
+ .hero-content{
+ display:block;
+ padding:40px 15px;
+ }
 
+ .quote-form{
+ max-width:420px;
+ margin:20px auto 0;
+ }
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 600px) {
 
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
+/* ===========================
+        MOBILE
+=========================== */
 
-  .hero-text p,
-  .highlight {
-    font-size: 0.9rem;
-  }
+@media (max-width:600px){
+ .hero{
+ min-height:auto;
+ }
 
-  .hero-text li {
-    font-size: 0.85rem;
-  }
+ .hero-content{
+ padding-top:30px;
+ padding-bottom:30px;
+ }
 
-  .quote-form {
-    max-width: 100%;
-    margin: 0px;
-  }
+ .hero-text h1{
+ font-size:1.8rem;
+ }
+
+ .hero-text p,
+ .highlight{
+ font-size:.9rem;
+ }
+
+ .hero-text li{
+ font-size:.85rem;
+ }
+
+ .quote-form{
+ max-width:100%;
+ padding:16px;
+ margin-top:20px;
+ }
+}
+
+
+/* ===========================
+        VERY SMALL PHONE
+=========================== */
+
+@media (max-width:380px){
+ .hero-content{
+ padding:25px 12px;
+ }
+
+ .hero-text h1{
+ font-size:1.6rem;
+ }
+
+.quote-form{
+ padding:15px;
+ }
+}
+
+
+/* ===========================
+        SAFARI FIX
+=========================== */
+
+@supports (-webkit-touch-callout:none){
+ .hero{
+ min-height:100svh;
+ }
+}
+
+
+/* ===========================
+    IMAGE PERFORMANCE
+=========================== */
+
+.hero-bg{
+backface-visibility:hidden;
+transform:translateZ(0);
+display:block;
+}
+
+
+/* ===========================
+    IMAGE POSITION
+=========================== */
+
+@media (max-width:768px){
+.hero-bg{
+ object-position:center center;
+ }
+}
+
+
+/* ===========================
+    DESKTOP MODE FIX
+=========================== */
+
+@media (orientation:landscape) and (max-height:500px){
+ .hero{
+ min-height:auto;
+ }
+
+ .hero-content{
+ padding-top:100px;
+ padding-bottom:40px;
+ }
+}
+
+
+/* ===========================
+    REDUCE MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+ .hero *{
+ animation:none!important;
+ transition:none!important;
+ scroll-behavior:auto!important;
+ }
+}
+
+/* ===========================
+        HERO TRUST BAR
+=========================== */
+
+.hero-trust{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:22px;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.10);
+    backdrop-filter:blur(8px);
+}
+
+.trust-item i{
+    color:#ff8c00;
+    font-size:15px;
+}
+
+.trust-item span{
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* Desktop */
+
+@media(min-width:992px){
+ .hero-trust{
+ max-width:560px;
+ }
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+ .hero-trust{
+ justify-content:center;
+ gap:10px;
+ margin-top:18px;
+ }
+
+ .trust-item{
+ padding:8px 12px;
+ }
+
+ .trust-item span{
+ font-size:13px;
+ }
+}
+
+/* ===================================================
+        HERO FINAL DESKTOP / IPAD FIX
+   Paste at the END of style.css
+=================================================== */
+
+/* iPad Pro Portrait & Landscape */
+@media (min-width:992px) and (max-width:1199px){
+
+.hero{
+  min-height:auto;
+}
+
+.hero-overlay{
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:35px;
+  padding:55px 15px;
+}
+
+.hero-text{
+  flex:1;
+  max-width:560px;
+}
+
+.quote-form{
+  width:360px;
+  flex:none;
+  margin:0;
+}
+
+.hero-bg{
+  object-position:center 30%;
+}
+}
+
+
+/* Desktop */
+@media (min-width:1200px) and (max-width:1599px){
+.hero{
+  min-height:82vh;
+}
+
+.hero-overlay{
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:55px;
+  padding:40px 15px;
+}
+
+.hero-text{
+  flex:1;
+  max-width:600px;
+}
+
+.quote-form{
+  width:370px;
+  flex:none;
+}
+
+.hero-bg{
+  object-position:center 32%;
+}
+}
+
+
+/* 2K / Large Desktop */
+@media (min-width:1600px){
+
+.hero{
+  min-height:76vh;
+}
+
+.hero-overlay{
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:70px;
+  padding:40px 15px;
+}
+
+.hero-text{
+max-width:620px;
+}
+
+.quote-form{
+width:380px;
+}
+
+.hero-bg{
+object-position:center 35%;
+}
 
 }
 
