@@ -1332,3 +1332,39 @@ padding-top:15px;
 text-align:center;
 font-size:13px;
 }
+
+/* DISCLOSURE */
+.disclosure {
+  background: #1b1c1d;
+  padding: 25px 15px;
+}
+
+.disclosure h3 {
+  font-size: 15px;
+  color: #25D366;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top-title {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #5c5c5c;
+  text-transform: uppercase;
+}
+
+
+.disclosure i {
+  color: #ff6d0b;
+}
+  
+
+.disclosure p {
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+}
+
