@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 - Page Not Found | IT WORLD THE COMPUTER ITSOLUTION</title>
+
+<meta name="description" content="The page you are looking for is unavailable, has been moved, or is currently under maintenance. Return to the homepage or explore our computer repair services in Gurugram.">
+
+<meta name="robots" content="noindex,follow">
+
+<!--CDN Files--> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+<!--CSS--> 
+<link rel="stylesheet" href="/css/main.css">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#cccccc;
+color:#222;
+}
+
+.error-page{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+.error-content{
+
+max-width:760px;
+width:100%;
+
+}
+
+.error-tag{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+background:#fff;
+
+border:1px solid #ddd;
+
+font-size:.9rem;
+
+font-weight:600;
+
+color:#f5740c;
+
+margin-bottom:25px;
+
+}
+
+.error-code{
+
+font-size:8rem;
+
+font-weight:800;
+
+line-height:1;
+
+color:#1e3a8a;
+
+margin-bottom:10px;
+
+}
+
+.error-content h1{
+
+font-size:2.3rem;
+
+margin-bottom:18px;
+
+}
+
+.error-content p{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+color:#555;
+
+max-width:650px;
+
+margin:0 auto;
+
+}
+
+.action-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+margin-top:40px;
+
+flex-wrap:wrap;
+
+}
+
+.action-buttons a{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 28px;
+
+border-radius:10px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.home-btn{
+
+background:#1e3a8a;
+
+color:#fff;
+
+}
+
+.home-btn:hover{
+
+background:#17306f;
+
+}
+
+.service-btn{
+
+background:#fff;
+
+border:2px solid #1e3a8a;
+
+color:#1e3a8a;
+
+}
+
+.service-btn:hover{
+
+background:#1e3a8a;
+
+color:#fff;
+
+}
+
+.extra-links{
+
+margin-top:35px;
+
+font-size:.95rem;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.extra-links a{
+
+color:#1e3a8a;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.extra-links a:hover{
+
+text-decoration:underline;
+
+}
+
+@media(max-width:744px){
+
+.error-page{
+
+padding:60px 18px;
+
+}
+
+.error-code{
+
+font-size:5.5rem;
+
+}
+
+.error-content h1{
+
+font-size:1.8rem;
+
+}
+
+.error-content p{
+
+font-size:1rem;
+
+}
+
+.action-buttons{
+
+flex-direction:column;
+
+}
+
+.action-buttons a{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+HEADER HERE
+========================= -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="/" class="brand" aria-label="IT WORLD THE COMPUTER ITSOLUTION">
+      <img src="/img/landingicon.avif" alt="IT WORLD THE COMPUTER ITSOLUTION" loading="lazy">
+      <div class="brand-text">
+        <span class="brand-main">IT WORLD</span>
+        <span class="brand-sub">THE COMPUTER ITSOLUTION</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary Navigation">
+      <a href="/">Home</a>
+      <a href="/services/">Services</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/about/">About</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="nav-action">
+      <a href="tel:+917836872230" class="icon-btn call-btn" aria-label="Call Now"><i class="fa-solid fa-phone-square"></i></a>
+      <a href="https://wa.me/917836872230" class="icon-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open Menu" aria-controls="sidebar" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+
+  <div class="sidebar-head">
+
+    <a href="/" class="brand">
+      <img src="/img/landingicon.avif" alt="IT WORLD THE COMPUTER ITSOLUTION">
+      <div class="brand-text">
+        <span class="brand-main">IT WORLD</span>
+        <span class="brand-sub">THE COMPUTER ITSOLUTION</span>
+      </div>
+    </a>
+
+    <button class="close-btn" id="closeMenu" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button>
+
+  </div>
+
+  <nav class="sidebar-links" aria-label="Mobile Navigation">
+    <a href="/">Home</a>
+    <a href="/services/">Services</a>
+    <a href="/gallery/">Gallery</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+
+  <div class="sidebar-action">
+    <a href="tel:+917836872230" class="btn call-btn"><i class="fa-solid fa-phone-square"></i><span>Call Now</span></a>
+    <a href="https://wa.me/917836872230" class="btn whatsapp-btn" target="_blank" rel="noopener"><i class="fa-brands fa-square-whatsapp"></i><span>WhatsApp</span></a>
+  </div>
+
+</aside>
+
+
+<main class="error-page">
+
+<div class="error-content">
+
+<div class="error-tag">
+<i class="fa-solid fa-triangle-exclamation"></i>
+Page Not Available
+</div>
+
+<div class="error-code">
+404
+</div>
+
+<h1>Oops! This Page Can't Be Found</h1>
+
+<p>
+The page you are looking for may have been moved, removed, renamed or is temporarily unavailable due to maintenance. Please return to the homepage or browse our available computer repair services.
+</p>
+
+<div class="action-buttons">
+
+<a href="/" class="home-btn">
+<i class="fa-solid fa-house"></i>
+Back to Home
+</a>
+
+<a href="/services/" class="service-btn">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+Our Services
+</a>
+
+</div>
+
+<div class="extra-links">
+Looking for
+<a href="/laptop-repair-gurugram/">Laptop Repair</a>,
+<a href="/desktop-repair-gurugram/">Desktop Repair</a>,
+<a href="/macbook-repair-gurugram/">MacBook Repair</a> or
+<a href="/data-recovery-gurugram/">Data Recovery</a>?
+</div>
+
+</div>
+
+</main>
+
+<!-- =========================
+FOOTER HERE
+========================= -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
